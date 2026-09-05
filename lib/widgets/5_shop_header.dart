@@ -13,14 +13,10 @@ class ShopHeader extends StatelessWidget {
         const SizedBox(height: 21),
 
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Icon(Icons.location_on, color: Color(0xff393636)),
-
-            const SizedBox(width: 4.5),
-
             const Text(
-              'Egypt, Giza',
+              '𓆩♡𓆪 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒃𝒂𝒄𝒌, 𝑴𝒐𝒔𝒕𝒂𝒇𝒂 𓆩♡𓆪',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
                 color: Color(0xff4C4F4D),

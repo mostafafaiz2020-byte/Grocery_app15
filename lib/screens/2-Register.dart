@@ -1,5 +1,6 @@
 // screens/2-Register.dart
 import 'package:flutter/material.dart';
+import 'package:grocery_app1/screens/4-BottomNavigationBar.dart';
 
 import '../widgets/logo.dart';
 import '../widgets/password_field.dart';
@@ -104,7 +105,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
                   const SizedBox(height: 25),
 
-                  SignupButton(onPressed: signup),
+                  SignupButton(
+                    onPressed: () {
+                      if (formKey.currentState!.validate()) {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const BottomNavigationScreen(),
+                          ),
+                        );
+                      }
+                    },
+                  ),
 
                   const SizedBox(height: 16),
 

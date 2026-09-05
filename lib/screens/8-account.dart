@@ -1,7 +1,9 @@
 // screens/8-account.dart
 
 import 'package:flutter/material.dart';
+import 'package:grocery_app1/screens/1-home.dart';
 import 'package:grocery_app1/widgets/8_account_info.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class Account extends StatelessWidget {
   const Account({super.key});
@@ -36,12 +38,12 @@ class Account extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'Mostafa faiz',
+                    '𝑴𝒐𝒔𝒕𝒂𝒇𝒂 𝑭𝒂𝒊𝒛',
                     style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
                   ),
 
                   const Text(
-                    'mostafa.faiz2020@gmail.com',
+                    '✉️ 𝒎𝒐𝒔𝒕𝒂𝒇𝒂.𝒇𝒂𝒊𝒛𝟐𝟎𝟐𝟎@𝒈𝒎𝒂𝒊𝒍.𝒄𝒐𝒎',
                     style: TextStyle(
                       color: Color(0xff7C7C7C),
                       fontWeight: FontWeight.w400,
@@ -54,7 +56,6 @@ class Account extends StatelessWidget {
           ],
         ),
 
-        // المسافة بين البيانات والـ Divider
         const SizedBox(height: 5),
 
         const Divider(),
@@ -95,12 +96,22 @@ class Account extends StatelessWidget {
               children: [
                 Icon(Icons.logout_outlined, color: Color(0xff53B175)),
                 SizedBox(width: 100),
-                Text(
-                  'Log Out',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 18,
-                    color: Color(0xff53B175),
+                GestureDetector(
+                  onTap: () {
+                    showMaterialModalBottomSheet(
+                      context: context,
+                      builder: (context) {
+                        return Home();
+                      },
+                    );
+                  },
+                  child: Text(
+                    'Log Out',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
+                      color: Color(0xff53B175),
+                    ),
                   ),
                 ),
               ],

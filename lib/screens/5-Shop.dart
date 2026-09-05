@@ -8,7 +8,6 @@ import 'package:grocery_app1/widgets/5_Best%20Selling.dart';
 import 'package:grocery_app1/widgets/5_Groceries.dart';
 import '../widgets/5_shop_header.dart';
 import '../widgets/5_shop_search.dart';
-import '../widgets/5_Groceries.dart';
 
 class Shop extends StatefulWidget {
   const Shop({super.key});
